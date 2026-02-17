@@ -23,6 +23,7 @@ jobs:
         pip install pytest
 
     - name: Run Grader
+      id: grade
       run: |
         python grading/grader.py
         
@@ -31,4 +32,16 @@ jobs:
       with:
         name: grading-report
         path: reports/grade.csv
+
+    - name: Comment PR with Grade
+      if: github.event_name == 'pull_request'
+      uses: marocchino/sticky-pull-request-comment@v2
+      with:
+        message: |
+          ## 📊 HASIL AUTO GRADING
+    
+          Nilai Akhir: **${{ steps.grade.outputs.total }}**
+    
+          Silakan perbaiki jika masih di bawah standar.
+    
 
