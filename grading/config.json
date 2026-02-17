@@ -1,0 +1,14 @@
+{
+  "tugas-1-circular-linked-list": {
+    "min_commit": 5,
+    "weight_test": 70,
+    "weight_structure": 20,
+    "weight_commit": 10
+  },
+  "tugas-2-stack-queue-linkedlist": {
+    "min_commit": 6,
+    "weight_test": 70,
+    "weight_structure": 20,
+    "weight_commit": 10
+  }
+}
