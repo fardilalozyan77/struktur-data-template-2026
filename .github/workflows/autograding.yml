@@ -25,3 +25,10 @@ jobs:
     - name: Run Grader
       run: |
         python grading/grader.py
+        
+    - name: Upload CSV Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: grading-report
+        path: reports/grade.csv
+
